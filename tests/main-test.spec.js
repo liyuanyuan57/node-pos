@@ -1,22 +1,12 @@
 var main = require ('../main.js');
 var fixtures = require ('../lib/fixtures');
+var inputs = require ('./inputs.js');
 
 describe('pos', function() {
-  var allItems, inputs, dateDigitToString;
+  var allItems, dateDigitToString;
 
   beforeEach(function() {
     allItems = fixtures.loadAllItems;
-    inputs = [
-      'ITEM000001',
-      'ITEM000001',
-      'ITEM000001',
-      'ITEM000001',
-      'ITEM000001',
-      'ITEM000003-2',
-      'ITEM000005',
-      'ITEM000005',
-      'ITEM000005'
-    ];
     dateDigitToString = function(num) {
       return num < 10 ? '0' + num : num;
     };

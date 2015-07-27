@@ -8,18 +8,8 @@ var PromotionCalculate = require('./lib/promotion-calculate.js');
 var Processor = require('./lib/processor.js');
 var Promotion = require('./lib/promotion.js');
 var Receipt = require('./lib/receipt.js');
+var inputs = require('./tests/inputs.js');
 
-inputs = [
-  'ITEM000001',
-  'ITEM000001',
-  'ITEM000001',
-  'ITEM000001',
-  'ITEM000001',
-  'ITEM000003-2',
-  'ITEM000005',
-  'ITEM000005',
-  'ITEM000005'
-];
 
 function printReceipt(tags){
  var scanner = new Scanner();
@@ -27,6 +17,7 @@ function printReceipt(tags){
  var pos = new Pos(scanner, cart);
  var promotion = new Promotion();
  pos.scan(tags);
+
  var processor = new Processor(cart,promotion);
  var promotioncalculate = new PromotionCalculate();
  processor.getPromotionItems(promotioncalculate);
@@ -35,6 +26,7 @@ function printReceipt(tags){
  var receipt = new Receipt(cart, processor,utils);
  console.log(pos.print(receipt));
  }
+
  printReceipt(inputs);
 
  exports.printReceipt = printReceipt;
