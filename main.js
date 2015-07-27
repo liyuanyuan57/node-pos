@@ -12,19 +12,19 @@ var inputs = require('./tests/inputs.js');
 
 
 function printReceipt(tags){
- var scanner = new Scanner();
- var cart = new Cart();
- var pos = new Pos(scanner, cart);
- var promotion = new Promotion();
- pos.scan(tags);
+  var scanner = new Scanner();
+  var cart = new Cart();
+  var pos = new Pos(scanner, cart);
+  var promotion = new Promotion();
+  pos.scan(tags);
 
- var discounter = new Discounter(cart,promotion);
- var promotioncalculate = new PromotionCalculate();
- discounter.getPromotionItems(promotioncalculate);
+  var discounter = new Discounter(cart,promotion);
+  var promotioncalculate = new PromotionCalculate();
+  discounter.getPromotionItems(promotioncalculate);
 
- var utils = new Utils();
- var receipt = new Receipt(cart, discounter,utils);
- console.log(pos.print(receipt));
+  var utils = new Utils();
+  var receipt = new Receipt(cart, discounter,utils);
+  console.log(pos.print(receipt));
  }
 
  printReceipt(inputs);
