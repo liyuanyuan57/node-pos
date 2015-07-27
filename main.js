@@ -5,7 +5,7 @@ var Pos = require('./lib/pos.js');
 var CartItem = require('./lib/cart-item.js');
 var Utils = require('./lib/utils.js');
 var PromotionCalculate = require('./lib/promotion-calculate.js');
-var Processor = require('./lib/processor.js');
+var Discounter = require('./lib/discounter.js');
 var Promotion = require('./lib/promotion.js');
 var Receipt = require('./lib/receipt.js');
 var inputs = require('./tests/inputs.js');
@@ -18,12 +18,12 @@ function printReceipt(tags){
  var promotion = new Promotion();
  pos.scan(tags);
 
- var processor = new Processor(cart,promotion);
+ var discounter = new Discounter(cart,promotion);
  var promotioncalculate = new PromotionCalculate();
- processor.getPromotionItems(promotioncalculate);
+ discounter.getPromotionItems(promotioncalculate);
 
  var utils = new Utils();
- var receipt = new Receipt(cart, processor,utils);
+ var receipt = new Receipt(cart, discounter,utils);
  console.log(pos.print(receipt));
  }
 
