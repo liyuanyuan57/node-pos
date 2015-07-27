@@ -1,0 +1,21 @@
+{
+  "name": "pos",
+  "version": "1.0.0",
+  "description": "POS cash register",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  ,"start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liyuanyuan57/node-pos.git"
+  },
+  "author": "liyuanyuan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liyuanyuan57/node-pos/issues"
+   ,"email":"liyuanyuan0507@outlook.com"
+  },
+  "homepage": "https://github.com/liyuanyuan57/node-pos#readme"
+}
