@@ -8,7 +8,6 @@ var PromotionCalculate = require('./lib/promotion-calculate.js');
 var Discounter = require('./lib/discounter.js');
 var Promotion = require('./lib/promotion.js');
 var Receipt = require('./lib/receipt.js');
-var inputs = require('./tests/inputs.js');
 
 
 function printReceipt(tags){
@@ -27,6 +26,5 @@ function printReceipt(tags){
   console.log(pos.print(receipt));
  }
 
- printReceipt(inputs);
 
  exports.printReceipt = printReceipt;
