@@ -1,0 +1,19 @@
+var CartItem = require('./cart-item.js');
+var Item = require('./item.js');
+
+function Scanner(){
+}
+
+Scanner.prototype.scan = function(tags){
+  var tag = tags.split('-');
+  var barcode = tag[0];
+  var count = parseFloat(tag[1]) || 1;
+
+  var item1 = new Item();
+  var item = item1.findItem(barcode);
+  var cartItem = new CartItem(item,count);
+
+  return cartItem;
+};
+
+module.exports = Scanner;

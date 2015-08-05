@@ -4,8 +4,8 @@
   "description": "POS cash register",
   "main": "main.js",
   "scripts": {
-    "test": "jasmine-node ./tests/main-test.spec.js"
-  ,"start": "node start.js"
+    "test": "jasmine "
+  ,"start": "node ./main/start.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,6 @@
     "url": "https://github.com/liyuanyuan57/node-pos/issues"
    ,"email":"liyuanyuan0507@outlook.com"
   },
-  "homepage": "https://github.com/liyuanyuan57/node-pos#readme"
+  "homepage": "https://github.com/liyuanyuan57/node-pos#readme",
+  "devDependencies": "^2.3.1"
 }
